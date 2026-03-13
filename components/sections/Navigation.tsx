@@ -39,7 +39,7 @@ export function Navigation() {
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <button
             onClick={() => scrollTo("#hero")}
-            className="font-sans text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
+            className="cursor-pointer font-sans text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
           >
             {personalInfo.firstName[0]}{personalInfo.lastName[0]}
           </button>
@@ -52,7 +52,7 @@ export function Navigation() {
                 <button
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
-                  className="relative py-1 font-mono text-xs uppercase tracking-[0.1em] text-muted transition-colors hover:text-foreground"
+                  className="relative cursor-pointer py-1 font-mono text-xs uppercase tracking-[0.1em] text-muted transition-colors hover:text-foreground"
                 >
                   {link.label}
                   {isActive && (
