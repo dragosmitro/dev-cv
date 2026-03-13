@@ -283,23 +283,23 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
-    name: "Tapptitude Website",
+    name: "Corporate Website - Tech Studio",
     company: "Kloudworks",
     description:
-      "Corporate website for Tapptitude - a top 1% mobile app development studio (Clutch-ranked, Deloitte Fast 50) with offices in Cluj-Napoca, London, New York, and Amsterdam.",
+      "Full corporate website for an internationally recognized mobile app development studio with multiple offices across Europe and the US.",
     highlights: [
       "Built the entire website from scratch, handling design implementation, frontend development, and deployment end-to-end.",
     ],
     technologies: ["TypeScript", "React", "Next.js", "Node.js"],
   },
   {
-    name: "Healthcare Integration Platform",
+    name: "Healthcare Integration API & Social Platform",
     company: "Kloudworks",
     description:
-      "API layer connecting medical services across multiple hospitals in Western Europe, paired with a social feed for healthcare news and articles.",
+      "Integration layer connecting medical services across multiple institutions in Western Europe, paired with a content platform for industry professionals.",
     highlights: [
-      "Developed the integration API that aggregated and standardized medical service data from multiple hospital systems.",
-      "Built a Facebook-style social feed for healthcare professionals featuring news, articles, and updates from the medical domain.",
+      "Developed the integration API that aggregated and standardized service data from multiple external systems.",
+      "Built a social feed platform for professionals featuring news, articles, and domain-specific updates.",
     ],
     technologies: [
       "TypeScript",
@@ -311,13 +311,13 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
-    name: "Database Transformation & Data Analysis",
+    name: "Data Migration & Analytics",
     company: "Kloudworks",
     description:
-      "Data engineering project involving database migrations, transformations, and analytical processing for various client datasets.",
+      "Data engineering initiative involving large-scale database migrations, structural transformations, and analytical processing for client datasets.",
     highlights: [
-      "Performed complex database transformations and data migration pipelines to restructure and consolidate client data.",
-      "Conducted data analysis using Python to extract insights and support business decision-making.",
+      "Performed complex database transformations and migration pipelines to restructure and consolidate data across systems.",
+      "Conducted data analysis using Python to extract actionable insights and support strategic decision-making.",
     ],
     technologies: ["Python", "SQL", "Data Analysis", "ETL"],
   },
