@@ -14,6 +14,32 @@ export interface EducationItem {
   status: "In Progress" | "Completed";
 }
 
+export interface ProjectItem {
+  name: string;
+  company: string;
+  description: string;
+  highlights: string[];
+  technologies: string[];
+}
+
+export interface PublicationItem {
+  title: string;
+  authors: string;
+  venue: string;
+  year: number;
+  description: string;
+  link: string;
+  technologies: string[];
+}
+
+export interface PersonalProjectItem {
+  name: string;
+  url?: string;
+  description: string;
+  highlights: string[];
+  technologies: string[];
+}
+
 export interface ContactInfo {
   location: string;
   email: string;
@@ -160,6 +186,154 @@ export const experiences: ExperienceItem[] = [
   },
 ];
 
+export const projects: ProjectItem[] = [
+  {
+    name: "Recipe Management Platform",
+    company: "BESTMIX",
+    description:
+      "Core module of the BESTMIX suite - an industry-leading least-cost recipe formulation and optimization platform used by 1,000+ customers across 60 countries in the food, feed, and pet food industries.",
+    highlights: [
+      "Contributed significantly to the evolution of the recipe management engine, improving formulation logic, UI workflows, and overall module reliability.",
+      "Worked on performance-critical optimization paths that directly impact production cost savings for clients worldwide.",
+      "Helped shape architectural decisions that improved extensibility and long-term maintainability of the platform.",
+    ],
+    technologies: ["C#", ".NET", "WPF", "DevExpress", "SQL", "Gurobi"],
+  },
+  {
+    name: "Internal Applications & 3rd Party Integrations",
+    company: "BESTMIX",
+    description:
+      "Suite of internal tools and integration layers connecting BESTMIX with external services, regulatory systems, and client infrastructure.",
+    highlights: [
+      "Integrated third-party systems such as GHS (Globally Harmonized System) for chemical classification compliance and Gurobi for mathematical optimization.",
+      "Built and maintained REST API integrations - both public-facing and inter-service - enabling seamless data exchange across the platform ecosystem.",
+      "Designed and executed a large-scale ETL pipeline for the entire database structure (thousands of tables), including data normalization from legacy JSON-based storage to properly structured relational schemas.",
+    ],
+    technologies: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "SQL",
+      "REST APIs",
+      "GHS",
+      "Gurobi",
+      "ETL",
+      "Azure",
+    ],
+  },
+  {
+    name: "AVANSIS - Taxpayer Platform",
+    company: "Integrisoft",
+    description:
+      "Part of the AVANSIS ecosystem - Romania's leading integrated information system for local public administration, serving 400+ institutions and approximately 3 million citizens, managing over 8 billion RON/year in tax obligations.",
+    highlights: [
+      "Designed and implemented the responsive mobile and tablet layouts, ensuring a seamless experience for citizens accessing the platform from any device.",
+      "Improved existing user flows for tax payment, declarations, and document issuance, reducing friction and increasing adoption.",
+      "Developed new, streamlined workflows that simplified complex administrative processes for end users.",
+    ],
+    technologies: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "TypeScript",
+      "Angular",
+      "SQL",
+    ],
+  },
+  {
+    name: "AVANMOB - Inspector Mobile App",
+    company: "Integrisoft",
+    description:
+      "Mobile application designed for field inspectors, integrating the tax system with multiple administrative modules to enable on-site tax calculation and verification.",
+    highlights: [
+      "Contributed to an integrated solution that combined tax data, property records, and citizen information into a single inspector workflow.",
+      "Enabled inspectors to compute and verify taxes directly in the field, significantly reducing back-office processing time.",
+    ],
+    technologies: ["C#", ".NET", "TypeScript", "Angular", "SQL", "REST APIs"],
+  },
+  {
+    name: "BackOffice - Administrative Platform",
+    company: "Integrisoft",
+    description:
+      "Comprehensive back-office application used by inspectors across municipal offices for all citizen-facing operations - from tax management to permits and social services.",
+    highlights: [
+      "Worked on the core platform used daily by inspectors in city halls across Romania for processing citizen requests.",
+      "Contributed to feature development and workflow improvements that streamlined administrative operations.",
+    ],
+    technologies: ["C#", ".NET", "ASP.NET Core", "Angular", "SQL", "GCP"],
+  },
+  {
+    name: "XFlote - Fleet Management ERP",
+    company: "LivratorTOP",
+    description:
+      "Proprietary, fully web-based internal ERP system for managing delivery fleets operating across platforms like Bolt Food, Glovo, and Wolt - covering fleet operations, housing, HR, and all administrative processes.",
+    highlights: [
+      "Supervised and contributed to the implementation of the entire platform, from architecture decisions to feature delivery.",
+      "Improved existing business flows and introduced new workflows that increased operational efficiency across fleet management, HR, and housing modules.",
+      "Ensured the platform remained stable, performant, and aligned with evolving business requirements as a 100% internal tool.",
+    ],
+    technologies: [
+      "PHP",
+      "Symfony",
+      "React",
+      "JavaScript",
+      "SQL",
+      "AWS",
+      "REST APIs",
+    ],
+  },
+  {
+    name: "Tapptitude Website",
+    company: "Kloudworks",
+    description:
+      "Corporate website for Tapptitude - a top 1% mobile app development studio (Clutch-ranked, Deloitte Fast 50) with offices in Cluj-Napoca, London, New York, and Amsterdam.",
+    highlights: [
+      "Built the entire website from scratch, handling design implementation, frontend development, and deployment end-to-end.",
+    ],
+    technologies: ["TypeScript", "React", "Next.js", "Node.js"],
+  },
+  {
+    name: "Healthcare Integration Platform",
+    company: "Kloudworks",
+    description:
+      "API layer connecting medical services across multiple hospitals in Western Europe, paired with a social feed for healthcare news and articles.",
+    highlights: [
+      "Developed the integration API that aggregated and standardized medical service data from multiple hospital systems.",
+      "Built a Facebook-style social feed for healthcare professionals featuring news, articles, and updates from the medical domain.",
+    ],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "REST APIs",
+      "Azure",
+    ],
+  },
+  {
+    name: "Database Transformation & Data Analysis",
+    company: "Kloudworks",
+    description:
+      "Data engineering project involving database migrations, transformations, and analytical processing for various client datasets.",
+    highlights: [
+      "Performed complex database transformations and data migration pipelines to restructure and consolidate client data.",
+      "Conducted data analysis using Python to extract insights and support business decision-making.",
+    ],
+    technologies: ["Python", "SQL", "Data Analysis", "ETL"],
+  },
+  {
+    name: "Internal Workflow Optimization Tools",
+    company: "Grant Thornton International",
+    description:
+      "Suite of internal applications built to optimize existing business processes and operational workflows within the organization.",
+    highlights: [
+      "Designed and implemented Python-based tools that automated and streamlined internal operational flows.",
+      "Built APIs that enhanced data accessibility and improved cross-team efficiency.",
+    ],
+    technologies: ["Python", "SQL", "REST APIs"],
+  },
+];
+
 export const skillCategories: Record<string, string[]> = {
   "Languages & Frameworks": [
     "C#",
@@ -203,6 +377,89 @@ export const aiApproach = {
   ],
 } as const;
 
+export const publications: PublicationItem[] = [
+  {
+    title:
+      "A Web-Based Facial Recognition Application Using Convolutional Neural Networks (CNNs)",
+    authors: "Dragoș Mitroescu, Simona Oprea, Adela Bâra",
+    venue: "ResearchGate - Academic Conference Paper",
+    year: 2026,
+    description:
+      "Research paper exploring the application of Convolutional Neural Networks for real-time facial recognition in a web-based environment. The paper presents a full-stack application that allows users to upload personal images and receive real-time AI-powered interpretations of facial characteristics, demonstrating practical applications of deep learning in accessible web interfaces.",
+    link: "https://www.researchgate.net/publication/400673219_A_Web-Based_Facial_Recognition_Application_Using_Convolutional_Neural_Networks_CNNs",
+    technologies: [
+      "Python",
+      "CNNs",
+      "Deep Learning",
+      "Computer Vision",
+      "Web Development",
+    ],
+  },
+];
+
+export const personalProjects: PersonalProjectItem[] = [
+  {
+    name: "Facial Recognition Web Application",
+    description:
+      "Full-stack web application built as the practical component of the CNN research paper - enabling users to upload images and receive real-time AI-driven facial analysis using deep learning models.",
+    highlights: [
+      "Designed and implemented the entire application architecture, from the CNN model pipeline to the web interface.",
+      "Built a real-time image processing pipeline that accepts user uploads and returns facial characteristic interpretations.",
+      "Integrated trained Convolutional Neural Network models into a production-ready web environment.",
+    ],
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "CNNs",
+      "React",
+      "REST APIs",
+      "Computer Vision",
+    ],
+  },
+  {
+    name: "RoAutentic",
+    url: "https://roautentic.ro",
+    description:
+      "Romania's marketplace platform dedicated to authentic local products - connecting traditional producers with consumers seeking genuine Romanian food and crafts. Built entirely from scratch as a solo project.",
+    highlights: [
+      "Designed and developed the entire platform end-to-end: e-commerce engine, producer onboarding, product catalog, shopping cart, and payment integration.",
+      "Built a curated marketplace model where producers can register, list products, and manage their storefronts independently.",
+      "Implemented the full buyer experience - browsing, filtering, purchasing - with a focus on showcasing product authenticity and origin.",
+      "100% solo project - architecture, design, frontend, backend, and deployment handled independently.",
+    ],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "Payment Integration",
+    ],
+  },
+  {
+    name: "EduAgenda",
+    url: "https://eduagenda.ro",
+    description:
+      "Comprehensive management system for educational centers, afterschool programs, private kindergartens, and schools - handling scheduling, student management, financials, attendance, and parent communication.",
+    highlights: [
+      "Built the entire platform from the ground up as a solo project, covering smart scheduling, student profiles, and financial tracking.",
+      "Developed advanced reporting features - auto-generated attendance registers, financial statements, and activity reports exportable as PDF/Excel.",
+      "Implemented multi-tier functionality: resource coordination (rooms, teachers, locations), automated payroll calculations, and dedicated parent accounts.",
+      "Designed a scalable SaaS model with free, Plus, and Enterprise tiers to serve individual tutors through large institutions.",
+    ],
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "PDF Generation",
+    ],
+  },
+];
+
 export const education: EducationItem[] = [
   {
     degree: "PhD in Economic Informatics",
@@ -245,6 +502,7 @@ export const languages = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
