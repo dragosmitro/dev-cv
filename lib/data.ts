@@ -191,6 +191,18 @@ export const skillCategories: Record<string, string[]> = {
   ],
 };
 
+export const aiApproach = {
+  headline: "AI-Augmented Development",
+  statement:
+    "I actively integrate AI tools and emerging technologies into my development workflow - from code generation and architecture validation to automated testing and documentation. I stay current with the latest advancements in AI-assisted engineering and take full ownership of the output quality, ensuring every AI-augmented deliverable meets production standards.",
+  principles: [
+    "AI-assisted code generation, review & refactoring",
+    "Prompt engineering for development workflows",
+    "Accountability for correctness and quality of AI-augmented output",
+    "Continuous adoption of emerging tools and methodologies",
+  ],
+} as const;
+
 export const education: EducationItem[] = [
   {
     degree: "PhD in Economic Informatics",
